@@ -39,7 +39,9 @@ const login = async (req, res) => {
     process.env.JWT_SECRET
   );
 
-  res.json({ token });
+  const userId = user.id
+
+  res.json({ token, userId});
 };
 
 module.exports = { login, register };
