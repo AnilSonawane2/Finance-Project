@@ -92,3 +92,8 @@ Step 3 : To Start the Server
 npm run dev
 ```
 
+### Note: I am using Free version of Vercel
+You might face some common issue while testing deployed API's like:
+- Free Vercel deployments sleep after inactivity (usually ~15–30 minutes).
+- When a request comes in after sleep, the serverless function has to cold start, which can take a few seconds.
+- This affects response time and is especially noticeable in APIs needing low latency.
